@@ -142,3 +142,64 @@
     color: var(--color-foreground);
   }
 }
+
+/* ── Identidade Silvio Neto Advogado ──────────────────────────────── */
+@theme inline {
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Karla", ui-sans-serif, system-ui, sans-serif;
+  --color-ink: var(--ink);
+  --color-bronze: var(--bronze);
+  --color-bronze-soft: var(--bronze-soft);
+  --color-sand: var(--sand);
+}
+
+:root {
+  --radius: 0.125rem;
+  --background: oklch(0.977 0.006 85);
+  --foreground: oklch(0.24 0.018 158);
+  --card: oklch(0.992 0.004 85);
+  --card-foreground: oklch(0.24 0.018 158);
+  --popover: oklch(0.992 0.004 85);
+  --popover-foreground: oklch(0.24 0.018 158);
+  --primary: oklch(0.255 0.022 158);
+  --primary-foreground: oklch(0.977 0.006 85);
+  --secondary: oklch(0.945 0.009 85);
+  --secondary-foreground: oklch(0.255 0.022 158);
+  --muted: oklch(0.945 0.009 85);
+  --muted-foreground: oklch(0.52 0.013 150);
+  --accent: oklch(0.645 0.068 78);
+  --accent-foreground: oklch(0.99 0.005 85);
+  --border: oklch(0.9 0.011 85);
+  --input: oklch(0.9 0.011 85);
+  --ring: oklch(0.645 0.068 78);
+  --ink: oklch(0.2 0.018 158);
+  --bronze: oklch(0.645 0.068 78);
+  --bronze-soft: oklch(0.8 0.045 80);
+  --sand: oklch(0.945 0.012 82);
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+    font-weight: 300;
+  }
+}
+
+@utility eyebrow {
+  font-size: 0.6875rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@utility animate-rise {
+  animation: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
