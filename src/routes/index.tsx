@@ -50,40 +50,41 @@ export const Route = createFileRoute("/")({
 
 function Hero() {
   return (
-    <section className="relative min-h-[92vh] overflow-hidden bg-ink">
+    <section className="relative min-h-[88vh] overflow-hidden bg-ink md:min-h-[92vh]">
       <div className="absolute inset-y-0 right-0 w-full md:w-[52%]">
         <img
           src={heroAsset.url}
           alt="Silvio Pereira da Silva Neto, advogado"
-          className="h-full w-full object-cover object-[center_12%] md:object-[center_top]"
+          className="h-full w-full object-cover object-[center_6%] md:object-[center_top]"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/75 to-ink/10 md:from-ink md:via-ink/25 md:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/85 to-ink/20 md:bg-gradient-to-r md:from-ink md:via-ink/25 md:to-transparent" />
       </div>
       <Nav overlay />
-      <div className="relative mx-auto flex min-h-[92vh] max-w-[1400px] flex-col justify-end px-6 pb-24 pt-40 md:max-w-[1400px] md:px-12">
+      <div className="relative mx-auto flex min-h-[88vh] max-w-[1400px] flex-col justify-end px-6 pb-16 pt-32 md:min-h-[92vh] md:px-12 md:pb-24 md:pt-40">
         <p className="eyebrow animate-rise text-bronze-soft">Advocacia boutique</p>
-        <h1 className="animate-rise mt-6 max-w-3xl text-[2.75rem] leading-[1.05] text-background md:text-[4.75rem]">
+        <h1 className="animate-rise mt-5 max-w-3xl text-[2.25rem] leading-[1.08] text-background sm:text-[2.75rem] md:text-[4.75rem]">
           Soluções Jurídicas <em className="text-bronze-soft">Inteligentes</em>
         </h1>
-        <p className="animate-rise mt-8 max-w-xl text-base leading-relaxed text-background/70">
+        <p className="animate-rise mt-6 max-w-xl text-[0.95rem] leading-relaxed text-background/75 md:text-base">
           Técnica, estratégia e atuação personalizada para questões jurídicas complexas e de
           relevante impacto patrimonial e empresarial.
         </p>
-        <div className="animate-rise mt-10 flex flex-wrap items-center gap-4">
+        <div className="animate-rise mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4 md:mt-10">
           <Link
             to="/contato"
-            className="bg-bronze px-8 py-4 text-[0.7rem] uppercase tracking-[0.2em] text-accent-foreground transition-opacity hover:opacity-90"
+            className="bg-bronze px-8 py-4 text-center text-[0.7rem] uppercase tracking-[0.2em] text-accent-foreground transition-opacity hover:opacity-90"
           >
             Entre em contato
           </Link>
           <Link
             to="/atuacao"
-            className="px-2 py-4 text-[0.7rem] uppercase tracking-[0.2em] text-background/70 underline underline-offset-8 transition-colors hover:text-bronze-soft"
+            className="px-2 py-3 text-center text-[0.7rem] uppercase tracking-[0.2em] text-background/70 underline underline-offset-8 transition-colors hover:text-bronze-soft sm:py-4"
           >
             Áreas de atuação
           </Link>
         </div>
       </div>
+
     </section>
   );
 }
