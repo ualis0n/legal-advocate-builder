@@ -51,14 +51,16 @@ export const Route = createFileRoute("/")({
 function Hero() {
   return (
     <section className="relative min-h-[92vh] overflow-hidden bg-ink">
-      <img
-        src={heroAsset.url}
-        alt="Silvio Pereira da Silva Neto, advogado"
-        className="absolute inset-0 h-full w-full object-cover object-[60%_center] opacity-90"
-      />
-      <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/70 to-ink/10" />
+      <div className="absolute inset-y-0 right-0 w-full md:w-[52%]">
+        <img
+          src={heroAsset.url}
+          alt="Silvio Pereira da Silva Neto, advogado"
+          className="h-full w-full object-cover object-[center_12%] md:object-[center_top]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/75 to-ink/10 md:from-ink md:via-ink/25 md:to-transparent" />
+      </div>
       <Nav overlay />
-      <div className="relative mx-auto flex min-h-[92vh] max-w-[1400px] flex-col justify-end px-6 pb-24 pt-40 md:px-12">
+      <div className="relative mx-auto flex min-h-[92vh] max-w-[1400px] flex-col justify-end px-6 pb-24 pt-40 md:max-w-[1400px] md:px-12">
         <p className="eyebrow animate-rise text-bronze-soft">Advocacia boutique</p>
         <h1 className="animate-rise mt-6 max-w-3xl text-[2.75rem] leading-[1.05] text-background md:text-[4.75rem]">
           Soluções Jurídicas <em className="text-bronze-soft">Inteligentes</em>
